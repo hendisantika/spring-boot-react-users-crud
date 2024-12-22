@@ -3,8 +3,14 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'frontend'
+      - '.github/workflows/maven.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'frontend'
+      - '.github/workflows/maven.yml'
 
 jobs:
   build:
@@ -27,10 +33,13 @@ jobs:
         run: npm install -g pnpm
 
       - name: Install dependencies
+        working-directory: frontend
         run: pnpm install
 
       - name: Run tests
+        working-directory: frontend
         run: pnpm test
 
       - name: Run linter
+        working-directory: frontend
         run: pnpm run lint
