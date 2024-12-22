@@ -8,3 +8,7 @@
 4. Go to frontend folder: `cd frontend`
 5. Run the frontend: `pnpm install && pnpm start`
 6. Open your favorite browser: http://localhost:3000
+
+### Image Screen shot
+
+
