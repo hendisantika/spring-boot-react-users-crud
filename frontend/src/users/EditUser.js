@@ -20,18 +20,17 @@ export default function EditUser() {
     };
 
     useEffect(() => {
+        const loadUser = async () => {
+            const result = await axios.get(`http://localhost:8080/api/users/${id}`);
+            setUser(result.data);
+        };
         loadUser();
-    }, []);
+    }, [id]);
 
     const onSubmit = async (e) => {
         e.preventDefault();
         await axios.put(`http://localhost:8080/api/users/${id}`, user);
         navigate("/");
-    };
-
-    const loadUser = async () => {
-        const result = await axios.get(`http://localhost:8080/api/users/${id}`);
-        setUser(result.data);
     };
 
     return (

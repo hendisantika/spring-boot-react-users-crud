@@ -1,8 +1,12 @@
 import {render, screen} from '@testing-library/react';
+import axios from 'axios';
 import App from './App';
 
-test('renders learn react link', () => {
+jest.mock('axios');
+
+test('renders navbar brand and add user button', async () => {
+    axios.get.mockResolvedValue({data: []});
     render(<App/>);
-    const linkElement = screen.getByText(/learn react/i);
-    expect(linkElement).toBeInTheDocument();
+    expect(screen.getByText(/full stack application/i)).toBeInTheDocument();
+    expect(await screen.findByRole('link', {name: /add user/i})).toBeInTheDocument();
 });
