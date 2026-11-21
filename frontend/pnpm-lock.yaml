@@ -12,8 +12,8 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(@testing-library/dom@10.4.2)
       '@testing-library/user-event':
-        specifier: ^13.5.0
-        version: 13.5.0(@testing-library/dom@10.4.2)
+        specifier: ^14.6.12
+        version: 14.6.12(@testing-library/dom@10.4.2)
       axios:
         specifier: ^1.21.1
         version: 1.21.1
@@ -1177,9 +1177,9 @@ packages:
       '@types/react-dom':
         optional: true
 
-  '@testing-library/user-event@13.5.0':
-    resolution: {integrity: sha512-5Kwtbo3Y/NowpkbRuSepbyMFkZmHgD+vPzYB/RJ4oxt5Gj/avFFBYjhw27cqSVPVw/3a67NK1PbiIr9k4Gwmdg==}
-    engines: {node: '>=10', npm: '>=6'}
+  '@testing-library/user-event@14.6.12':
+    resolution: {integrity: sha512-8yQV8v+eToBhsUO4oYrZY7fzhpTEMZx4IDx0/iuER/x0Xuy0NdqQOhsaaUNlvXE03N7vQ+4RCXUieKC0NJty9w==}
+    engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
 
@@ -6998,9 +6998,8 @@ snapshots:
       '@types/react': 18.3.18
       '@types/react-dom': 18.3.5(@types/react@18.3.18)
 
-  '@testing-library/user-event@13.5.0(@testing-library/dom@10.4.2)':
+  '@testing-library/user-event@14.6.12(@testing-library/dom@10.4.2)':
     dependencies:
-      '@babel/runtime': 7.26.0
       '@testing-library/dom': 10.4.2
 
   '@tootallnate/once@1.1.2': {}
